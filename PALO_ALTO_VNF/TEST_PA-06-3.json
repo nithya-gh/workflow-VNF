@@ -1,0 +1,83 @@
+{
+  "data": {
+    "nfv-vnf-lcm:nfv-vnf": [
+      {
+        "network-function-type": "GENERIC",
+        "name": "TEST_PA-06-3",
+        "vnfd": "PALO_ALTO_FW",
+        "instantiation-level": "default",
+        "deployment-flavor": "default",
+        "location": {
+          "vim": {
+            "name": "svs-openstack",
+            "project": "PLDT",
+            "zone-id": "pldt-zone"
+          },
+          "vnfm": "ESC"
+        },
+        "network": [
+          {
+            "type": "VIM_NETWORK_MANAGEMENT",
+            "name": "Provider_management",
+            "extent": "external",
+            "subnet-name": "Provider_management"
+          },
+          {
+            "type": "VIM_NETWORK_SERVICE-1",
+            "name": "pldt_mano_dc2",
+            "extent": "external",
+            "subnet-name": "pldt_mano_dc2"
+          },
+          {
+            "type": "VIM_NETWORK_SERVICE-2",
+            "name": "pldt_mano_dc1",
+            "extent": "external",
+            "subnet-name": "pldt_mano_dc1"
+          }
+        ],
+        "unit": [
+          {
+            "type": "firewall",
+            "image": "PA-VM-KVM",
+            "flavor": "Palo_Alto_flavor",
+            "connection-point": [
+              {
+                "name": "int-east",
+                "ip-address": [
+                  {
+                    "id": 0,
+                    "fixed-address": ["172.16.101.65"]
+                  }
+                ],
+                "security-group": ["default"],
+                "network-type": "VIM_NETWORK_SERVICE-2"
+              },
+              {
+                "name": "int-mgmt",
+                "ip-address": [
+                  {
+                    "id": 0,
+                    "fixed-address": ["10.104.154.191"]
+                  }
+                ],
+                "security-group": ["default"],
+                "network-type": "VIM_NETWORK_MANAGEMENT"
+              },
+              {
+                "name": "int-west",
+                "ip-address": [
+                  {
+                    "id": 0,
+                    "fixed-address": ["172.16.102.65"]
+                  }
+                ],
+                "security-group": ["default"],
+                "network-type": "VIM_NETWORK_SERVICE-1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

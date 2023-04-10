@@ -1,0 +1,10 @@
+type=dhcp-client
+ip-address=
+netmask=
+default-gateway=
+hostname=$hostname
+dns-primary=$dnsserver
+panorama-server=$panserver
+dgname=
+tplname=
+vm-auth-key=$vimauthkey

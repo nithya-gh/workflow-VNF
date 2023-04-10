@@ -1,0 +1,10 @@
+metadata: 
+
+vnfd_id: PALO_ALTO_FW
+vnf_product_name: PaloAlto
+vnf_provider_id: Cisco
+vnf_package_version: 1.0
+vnf_software_version: 1.0
+vnf_release_date_time: 2022-12-06T17:03:15.034Z
+vnfm_info: 9:Cisco Elastic Services Controller:v04.04.01
+compatible_specification_versions: 2.7.1
