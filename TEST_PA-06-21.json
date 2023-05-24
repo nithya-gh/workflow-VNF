@@ -2,8 +2,8 @@
     "nfv-vnf": [
       {
         "network-function-type": "GENERIC",
-        "name": "TEST_PA-06-21",
-        "vnfd": "PALO_ALTO_FW-2CP-21",
+        "name": "PALO_ALTO_FW-2CP-58-1",
+        "vnfd": "PALO_ALTO_FW-2CP-58",
         "instantiation-level": "default",
         "deployment-flavor": "default",
         "location": {
